@@ -1,12 +1,13 @@
-et -ex
+#!/bin/bash new
 
-pushd attendee-service-source
+set -ex
+
+pushd attendee-service
   echo "Fetching Dependencies"
-    ./mvnw clean compile > /dev/null
+  ./mvnw clean compile > /dev/null
 
-      echo "Running Tests"
-        ./mvnw test
-	popd
+  echo "Running Tests"
+  ./mvnw test
+popd
 
-	exit 0
-
+exit 0
