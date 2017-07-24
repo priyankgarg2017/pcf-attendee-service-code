@@ -32,10 +32,10 @@ jobs:
     trigger: true
     passed: [test]
   - task: package
-    file: attendee-service/ci/tasks/package.yml
+    file: pcf-attendee-service-code/ci/tasks/package.yml
   - put: deploy-attendee-service
     params:
-      manifest: attendee-service/manifest.yml
+      manifest: pcf-attendee-service-code/manifest.yml
       path: package-output/attendee-service.jar
 
 - name: smoke_test
