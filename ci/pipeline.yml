@@ -23,7 +23,7 @@ jobs:
   - get: attendee-service
     trigger: true
   - task: test
-    file: attendee-service/ci/tasks/test.yml
+    file: pcf-attendee-service-code/ci/tasks/test.yml
 
 - name: deploy
   public: true
@@ -45,6 +45,6 @@ jobs:
     trigger: true
     passed: [deploy]
   - task: smoke_test
-    file: attendee-service/ci/tasks/smoke-test.yml
+    file: pcf-attendee-service-code/ci/tasks/smoke-test.yml
     params:
       ATTENDEE_SERVICE_URL: https://attendee-service-northeastward-integrability.apps.pikes.pal.pivotal.io/  #<---- REPLACE ME
