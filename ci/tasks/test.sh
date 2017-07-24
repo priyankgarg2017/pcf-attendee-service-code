@@ -2,12 +2,12 @@
 
 set -ex
 
-pushd attendee-service
+#pushd attendee-service
   echo "Fetching Dependencies"
   ./mvnw clean compile > /dev/null
 
   echo "Running Tests"
   ./mvnw test
-popd
+#popd
 
 exit 0
