@@ -1,4 +1,4 @@
-#!/bin/bash new
+#!/bin/bash
 
 set -ex
 
