@@ -4,10 +4,10 @@ set -ex
 
 #pushd attendee-service
   echo "Fetching Dependencies"
-  ./mvnw clean compile > /dev/null
+  ./attendee-service/mvnw clean compile > /dev/null
 
   echo "Running Tests"
-  ./mvnw test
+  ./attendee-service/mvnw test
 #popd
 
 exit 0
